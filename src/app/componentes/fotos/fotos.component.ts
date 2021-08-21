@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 import { Produto } from 'src/app/model/produto';
 
@@ -18,10 +19,35 @@ export class FotosComponent implements OnInit {
       }
   ];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  chamanozap(foto: Produto){
+    let link: string = `https://api.whatsapp.com/send?phone=5516991848360&text=Ol%C3%A1%2C%20gostaria%20de%20comprar%20${foto.titulo}`;
+    window.location.href = link
   }
 
+  async compartilhar() {
+    await navigator.clipboard.writeText(document.location.href);
+    
+    const dialog = this.dialog.open(DialogComponent);
+
+  }
+
+  
+  constructor(
+    public dialog: MatDialog
+  ) { }
+
+  ngOnInit(): void {
+  
+  }
 }
+
+@Component({
+  selector: 'dialog-component',
+  templateUrl: './dialog.html'
+})
+export class DialogComponent {
+
+
+}
+
 
