@@ -10,8 +10,18 @@ import { Produto } from 'src/app/model/produto';
 export class FotosComponent implements OnInit {
 
   fotos: Produto[] = [
-    {titulo: 'Cesta de Frutas', caminho: "../assets/frutas.jpg", descricao: 'Uma cesta repleta de frutas', preco: 24.44},
-    {titulo: 'Outra Cesta de Frutas', caminho: "../assets/popa.png", descricao: 'Mais uma cesta repleta de frutas', preco: 34.44}
+     {
+      titulo: 'Manga ',
+      caminho: '../assets/fotos/Manga - 4.49 - Manga Palmer preço por Kg -.jpeg',
+      preco: 4.49,
+      descricao: ' Manga Palmer preço por Kg '
+    },
+     {
+      titulo: 'Abacaxi ',
+      caminho: '../assets/fotos/Abacaxi - 6.00 - Abacaxi preço por unidade -.jpeg',
+      preco: 6,
+      descricao: ' Abacaxi preço por unidade '
+    }
   ];
 
   constructor() { }
