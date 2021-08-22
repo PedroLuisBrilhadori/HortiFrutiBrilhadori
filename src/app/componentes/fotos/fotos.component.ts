@@ -11,12 +11,18 @@ import { Produto } from 'src/app/model/produto';
 export class FotosComponent implements OnInit {
 
   fotos: Produto[] = [
-       {
-        titulo: 'Batata Doce ',
-        caminho: '../assets/fotos/Batata Doce - 2.50 - Batata doce na redinha -.jpeg',
-        preco: 2.5,
-        descricao: ' Batata doce na redinha '
-      }
+    {
+      titulo: 'Batata Doce ',
+      caminho: '../assets/fotos/Batata Doce - 2.50 - Batata doce na redinha -.jpeg',
+      preco: 2.5,
+      descricao: ' Batata doce na redinha '
+    },
+    {
+      titulo: 'manga ',
+      caminho: '../assets/fotos/manga - 4.49 - manga -.jpeg',
+      preco: 4.49,
+      descricao: ' manga '
+    }
   ];
 
   chamanozap(foto: Produto){
